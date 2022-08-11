@@ -15,6 +15,8 @@ body {
   margin: 0 auto;
 }
 
+/* --------------------------HEADER--------------------------- */
+
 .header {
   border-bottom: 1px solid #ececec;
   background: #ffffff;
@@ -158,6 +160,8 @@ nav {
   display: flex;
 }
 
+/* --------------------------HERO--------------------------- */
+
 .hero {
   background: #2f303a;
   padding-top: 200px;
@@ -210,6 +214,8 @@ nav {
 .order-buttom:focus {
   background: var(--accent-text-color);
 }
+
+/* --------------------------BENEFITS--------------------------- */
 
 .benefits {
   display: flex;
@@ -266,6 +272,8 @@ nav {
   padding-bottom: 94px;
 }
 
+/* --------------------------BUSINESS--------------------------- */
+
 .business-title {
   font-weight: 700;
   font-size: 36px;
@@ -304,6 +312,8 @@ nav {
   color: #ffffff;
   padding-top: 27px;
 }
+
+/* --------------------------TEAM--------------------------- */
 
 .team {
   background: #f5f4fa;
@@ -404,6 +414,8 @@ nav {
   fill: #afb1b8;
 } */
 
+/* --------------------------CUSTOMERS--------------------------- */
+
 .regular-customers {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -472,6 +484,8 @@ nav {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
+
+/* --------------------------FOOTER--------------------------- */
 
 footer {
   background: #2f303a;
@@ -560,10 +574,6 @@ footer {
   display: flex;
 }
 
-/* .footer-subscription-content {
-  display: flex;
-} */
-
 .subscription-title {
   font-weight: 700;
   font-size: 14px;
@@ -571,17 +581,19 @@ footer {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .input-subscription {
   width: 358px;
   height: 50px;
   padding: 15px;
-  margin-top: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background: transparent;
+  outline: none;
+  color: var(--main-text-color);
 }
 
 .subscription-btn {
@@ -599,6 +611,8 @@ footer {
   margin-left: 12px;
   align-items: center;
   display: flex;
+
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscription-btn::after {
@@ -608,6 +622,11 @@ footer {
   width: 24px;
   margin-left: 10px;
 }
+.subscription-btn:hover {
+  background: #188ce8;
+}
+
+/* --------------------------PORTFOLIO PAGE--------------------------- */
 
 .btn-list {
   display: flex;
@@ -735,6 +754,8 @@ footer {
   overflow: hidden;
 }
 
+/* --------------------------MODAL--------------------------- */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -822,7 +843,7 @@ footer {
   width: 100%;
 }
 
-.form-list {
+.icon-content {
   position: relative;
 }
 
@@ -839,22 +860,17 @@ footer {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-name:hover,
-.input-number:hover,
-.input-email:hover {
+.input-name:focus-within,
+.input-number:focus-within,
+.input-email:focus-within,
+.input-comment:focus-within {
   border: 1px solid var(--accent-text-color);
-
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-name:hover + .icon-name,
-.input-number:hover + .icon-number,
-.input-email:hover + .form-icon-email {
+.input-name:focus-within + .icon-name,
+.input-number:focus-within + .icon-number,
+.input-email:focus-within + .form-icon-email {
   fill: var(--accent-text-color);
-}
-
-.form-icon-email {
-  fill: #000000;
 }
 
 .form-list input {
@@ -862,6 +878,15 @@ footer {
   padding: 11px 12px 11px 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  width: 448px;
+  color: var(--main-text-color);
+  outline: none;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-comment {
+  color: var(--main-text-color);
 }
 
 .form-list label {
@@ -896,9 +921,63 @@ footer {
 .input-comment {
   height: 120px;
   width: 100%;
+  padding: 12px 16px;
+  outline: none;
 }
 
-.one-checkbox {
+.text-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.text-checkbox span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  border: 2px solid #212121;
+  margin-right: 7px;
+}
+
+.icon-check {
+  fill: transparent;
+}
+
+.input-check:checked + .text-checkbox span {
+  background-color: var(--accent-text-color);
+  border: none;
+  fill: #ffffff;
+}
+
+.input-check:checked + .text-checkbox .icon-check {
+  fill: #ffffff;
+}
+
+/* .text-checkbox {
+  display: flex;
+  align-items: center;
+} */
+
+/* .text-checkbox::before {
+  content: '';
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  border: 2px solid #212121;
+  margin-right: 7px;
+}
+
+.input-check:checked + .text-checkbox::before {
+  background-color: var(--accent-text-color);
+  border: none;
+  background-image: url(../images/icon/icon-checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
+.text-checkbox {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;

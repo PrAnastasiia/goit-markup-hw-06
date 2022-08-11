@@ -28,7 +28,7 @@
         <ul class="list nav-contacts">
           <li class="item">
             <a href="mailto:info@devstudio.com" class="contacts header-email">
-             <svg class="icon-email" width="16" height="12">
+              <svg class="icon-email" width="16" height="12">
                 <use href="../goit-markup-hw-06/images/icons.svg#icon-icon-email"></use>
               </svg>
               info@devstudio.com
@@ -414,13 +414,10 @@
         <div class="subscription">
           <h2 class="subscription-title">Подпишитесь на рассылку</h2>
           <form name="footer-form-subscription" class="footer-form-subscription">
-            <input type="email" id="subscription" placeholder="E-mail" class="input-subscription">
+            <input type="email" id="subscription" placeholder="E-mail" class="input-subscription" />
             <button type="submit" class="subscription-btn">Подписаться</button>
-       </form>
-          </div>
-        
-        
-
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -434,34 +431,35 @@
 
         <form class="form-modal">
           <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
-
           <div class="form-list">
-            
             <label for="name" class="form-name">Имя</label>
-            <input type="text" name="name" id="name" class="input-name" />
-            
-            <svg width="18" height="18" class="icon-name">
-              <use href="./images/icons.svg#icon-name" ></use>
-            </svg>
-            
-            
-          </div>  
+
+            <div class="icon-content">
+              <input type="text" name="name" id="name" class="input-name" />
+              <svg width="18" height="18" class="icon-name">
+                <use href="./images/icons.svg#icon-name"></use>
+              </svg>
+            </div>
+          </div>
 
           <div class="form-list">
             <label for="number" class="form-number">Телефон</label>
-            <input type="tel" name="number" placeholder=" " id="number" class="input-number" />
-            
-           <svg width="18" height="18" class="icon-number">
-              <use href="./images/icons.svg#icon-number" ></use>
-            </svg>
+            <div class="icon-content">
+              <input type="tel" name="number" placeholder=" " id="number" class="input-number" />
+              <svg width="18" height="18" class="icon-number">
+                <use href="./images/icons.svg#icon-number"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="form-list">
             <label for="email" class="form-email">Почта</label>
-            <input type="email" name="email" id="email" class="input-email" />
-          <svg width="18" height="18" class="form-icon-email">
-              <use href="./images/icons.svg#icon-post" ></use>
-            </svg>
+            <div class="icon-content">
+              <input type="email" name="email" id="email" class="input-email" />
+              <svg width="18" height="18" class="form-icon-email">
+                <use href="./images/icons.svg#icon-post"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="form-list">
@@ -470,17 +468,30 @@
               name="comment"
               placeholder="Введите текст"
               id="comment"
-              class="input-comment"></textarea>
-            
+              class="input-comment"
+            ></textarea>
           </div>
 
           <div class="form-checkbox">
-            <input type='checkbox' name="policy" id="policy" value="" />
-          <label for="policy" class="one-checkbox">Соглашаюсь с рассылкой и принимаю <a href="" class="modal-link">Условия договора</a></label
+            <input
+              type="checkbox"
+              name="policy"
+              id="policy"
+              value="true"
+              class="input-check visually-hidden"
+            />
+            <label for="policy" class="text-checkbox">
+              <span>
+                <svg width="11" height="8" class="icon-check">
+                  <use href="./images/icons.svg#icon-icon-checkbox"></use>
+                </svg>
+              </span>
+              Соглашаюсь с рассылкой и принимаю
+              <a href="" class="modal-link">&nbsp;Условия договора</a>
+            </label>
           </div>
-          
-        <button type="submit" class="modal-btn">Отправить</button>
 
+          <button type="submit" class="modal-btn">Отправить</button>
         </form>
       </div>
     </div>
