@@ -822,7 +822,7 @@ footer {
 .form-modal {
   text-align: center;
   width: 528px;
-  min-height: 581px;
+  height: 581px;
 }
 
 .form-title {
@@ -879,6 +879,7 @@ footer {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   width: 448px;
+  height: 40px;
   color: var(--main-text-color);
   outline: none;
 
@@ -916,6 +917,7 @@ footer {
 
 .form-checkbox {
   margin-top: 20px;
+  justify-content: center;
 }
 
 .input-comment {
@@ -945,6 +947,10 @@ footer {
   fill: transparent;
 }
 
+.input-check:focus-within + .text-checkbox span {
+  border: 2px solid var(--accent-text-color);
+}
+
 .input-check:checked + .text-checkbox span {
   background-color: var(--accent-text-color);
   border: none;
@@ -953,6 +959,10 @@ footer {
 
 .input-check:checked + .text-checkbox .icon-check {
   fill: #ffffff;
+}
+
+.input-check:focus-within {
+  border: var(--accent-text-color);
 }
 
 /* .text-checkbox {
