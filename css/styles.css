@@ -931,6 +931,8 @@ footer {
 .text-checkbox {
   display: flex;
   align-items: center;
+
+  justify-content: center;
 }
 
 .text-checkbox span {
