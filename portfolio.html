@@ -16,27 +16,33 @@
   </head>
   <body>
     <header class="header">
-      <div class="container header-link">
-        <nav>
-          <a href="./index.html" class="logo"><span class="web-blue">Web</span>Studio</a>
-          <ul class="list site-nav">
-            <li class="item"><a href="./index.html" class="nav-link">Студия</a></li>
-            <li class="item"><a href="./portfolio.html" class="nav-link active">Портфолио</a></li>
-            <li class="item"><a href="@" class="nav-link">Контакты</a></li>
+      <div class="header__menu container">
+        <nav class="header__nav">
+          <a href="./index.html" class="header__logo"
+            ><span class="header__logo--blue">Web</span>Studio</a
+          >
+          <ul class="nav list--not-decoration">
+            <li class="nav__item">
+              <a href="./index.html" class="nav__link">Студия</a>
+            </li>
+            <li class="nav__item">
+              <a href="./portfolio.html" class="nav__link nav__link--active">Портфолио</a>
+            </li>
+            <li class="nav__item"><a href="@" class="nav__link">Контакты</a></li>
           </ul>
         </nav>
-        <ul class="list nav-contacts">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="contacts header-email">
-              <svg class="icon-email" width="16" height="12">
+        <ul class="contacts list--not-decoration">
+          <li class="contacts__item">
+            <a href="mailto:info@devstudio.com" class="contacts__link">
+              <svg class="contacts__icon--email" width="16" height="12">
                 <use href="../goit-markup-hw-06/images/icons.svg#icon-icon-email"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="contacts header-phone"
-              ><svg class="icon-phone" width="12" height="16">
+          <li class="contacts__item">
+            <a href="tel:+380961111111" class="contacts__link"
+              ><svg class="contacts__icon--phone" width="12" height="16">
                 <use href="./images/icons.svg#icon-icon-phone"></use></svg
               >+38 096 111 11 11</a
             >
@@ -49,7 +55,7 @@
       <section class="portfolio">
         <div class="container">
           <h1 class="visually-hidden">Портфолио</h1>
-          <ul class="btn-list list">
+          <ul class="btn-list list--not-decoration">
             <li><button type="button" class="menu-batton">Все</button></li>
             <li><button type="button" class="menu-batton">Веб-сайты</button></li>
             <li><button type="button" class="menu-batton">Приложения</button></li>
@@ -57,7 +63,7 @@
             <li><button type="button" class="menu-batton">Маркетинг</button></li>
           </ul>
 
-          <ul class="portfolio-list list">
+          <ul class="portfolio-list list--not-decoration">
             <li class="portfolio-item">
               <a href="@" class="link-portfolio">
                 <div class="portfolio-content">
@@ -216,7 +222,7 @@
           <a href="./index.html" class="logo-footer"><span class="web-blue">Web</span>Studio</a>
           <address class="address-content">
             <p class="footer-address">г. Киев, пр-т Леси Украинки, 26</p>
-            <ul class="footer-contact list">
+            <ul class="footer-contact list--not-decoration">
               <li class="footer-email">
                 <a href="mailto:info@devstudio.com" class="email">info@devstudio.com</a>
               </li>
@@ -229,7 +235,7 @@
 
         <div class="icon-social-media">
           <h2 class="cta">Присоединяйтесь</h2>
-          <ul class="list icon-list">
+          <ul class="icon-list list--not-decoration">
             <li class="footer-icon-item">
               <a href="" class="footer-soc-link">
                 <svg class="footer-soc-icon" width="20" height="20">
